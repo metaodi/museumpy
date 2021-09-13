@@ -9,7 +9,7 @@ function cleanup {
 trap "cleanup" EXIT
 
 # Check PEP-8 code style and McCabe complexity
-flake8 . --count --show-source --statistics
+flake8 . --count --show-source --statistics 
 
 # run tests with test coverage
 pytest tests/
