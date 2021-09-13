@@ -1,4 +1,6 @@
-sruthi.egg-info
+museumpy.egg-info
 *.pyc
 *.swp
 .coverage
+pyenv
+.env
