@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Changed
 - Add possiblity to provide a `map_function` to parse custom fields
 
+### Added
+- Some examples to show how to use this library
+- README describing the library
+
 ## [0.0.1] - 2021-09-10
 ### Added
 - Initial release of museumpy

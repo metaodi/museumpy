@@ -1,26 +1,24 @@
 # -*- coding: utf-8 -*-
 
 from . import xmlparse
-from flatten_dict import flatten
 
 ZETCOM_NS = "http://www.zetcom.com/ria/ws/module"
 
 
 class SearchResponse(object):
-    def __init__(self, xml_response):
+    def __init__(self, xml_response, map_function=None):
         self.xmlparser = xmlparse.XMLParser()
         self.records = []
-        self._extract_records(xml_response)
+        self._extract_records(xml_response, map_function)
 
-    def _extract_records(self, xml):
+    def _extract_records(self, xml, map_function):
         new_records = []
-        
-        #print(self.xmlparser.tostring(xml))
         xml_recs = self.xmlparser.findall(xml, f'.//{{{ZETCOM_NS}}}module/{{{ZETCOM_NS}}}moduleItem')
         for xml_rec in xml_recs:
-
             record = self._map_xml(xml_rec)
             record['raw'] = self.xmlparser.todict(xml_rec, xml_attribs=True)
+            if map_function:
+                record = map_function(record, xml_rec)
             new_records.append(record)
         self.records.extend(new_records)
 

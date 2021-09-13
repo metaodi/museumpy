@@ -1,3 +1,4 @@
 requests
 defusedxml
 xmltodict
+python-dotenv

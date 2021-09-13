@@ -35,10 +35,11 @@ SEARCH_TEMPLATE = """<?xml version="1.0" encoding="UTF-8"?>
 
 
 class MuseumPlusClient(object):
-    def __init__(self, base_url=None, requests_kwargs=None):
+    def __init__(self, base_url=None, map_function=None, requests_kwargs=None):
         self.session = requests.Session()
         self.base_url = base_url
         self.xmlparser = xmlparse.XMLParser()
+        self.map_function = map_function
         self.requests_kwargs = requests_kwargs or {}
 
     def fulltext_search(self, query, module='Object', limit=100, offset=0):
@@ -51,7 +52,7 @@ class MuseumPlusClient(object):
         )
         xml = data.encode("utf-8")
         xml_response = self._post_xml(url, xml)
-        return response.SearchResponse(xml_response)
+        return response.SearchResponse(xml_response, self.map_function)
 
     def search(self, field, value, module='Object', limit=100, offset=0):
         url = f"{self.base_url}/ria-ws/application/module/{module}/search"
@@ -64,7 +65,7 @@ class MuseumPlusClient(object):
         )
         xml = data.encode("utf-8")
         xml_response = self._post_xml(url, xml)
-        return response.SearchResponse(xml_response)
+        return response.SearchResponse(xml_response, self.map_function)
 
     def module_item(self, id, module='Object'):
         url = f"{self.base_url}/ria-ws/application/module/{module}/{id}"
