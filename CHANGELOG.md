@@ -26,6 +26,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/museumpy/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/metaodi/museumpy/compare/v0.0.2...HEAD
 [0.0.2]: https://github.com/metaodi/museumpy/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/metaodi/museumpy/releases/tag/v0.0.1
