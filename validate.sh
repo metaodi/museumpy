@@ -12,4 +12,4 @@ trap "cleanup" EXIT
 flake8 . --count --show-source --statistics
 
 # run tests with test coverage
-pytest --cov=sruthi tests/
+pytest tests/
