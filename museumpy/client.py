@@ -16,7 +16,8 @@ FULLTEXT_TEMPLATE = """<?xml version="1.0" encoding="UTF-8"?>
       </search>
     </module>
   </modules>
-</application>"""
+</application>"""  # noqa
+
 
 SEARCH_TEMPLATE = """<?xml version="1.0" encoding="UTF-8"?>
 <application xmlns="http://www.zetcom.com/ria/ws/module/search" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.zetcom.com/ria/ws/module/search http://docs.zetcom.com/ws/module/search/search_1_4.xsd">
@@ -31,7 +32,7 @@ SEARCH_TEMPLATE = """<?xml version="1.0" encoding="UTF-8"?>
       </search>
     </module>
   </modules>
-</application>"""
+</application>"""  # noqa
 
 
 class MuseumPlusClient(object):
@@ -129,4 +130,3 @@ class MuseumPlusClient(object):
         except requests.exceptions.RequestException as e:
             raise errors.MuseumPlusError("Request error: %s" % e)
         return res
-

@@ -1,7 +1,7 @@
 __version__ = '0.0.1'
 __all__ = ['client', 'errors', 'response', 'xmlparse']
 
-from .errors import MuseumPlusError
+from .errors import MuseumPlusError  # noqa
 from .client import MuseumPlusClient
 
 def fulltext_search(base_url, query, **kwargs):  # noqa
@@ -28,4 +28,3 @@ def search(base_url, field, value, **kwargs):  # noqa
 
     c = MuseumPlusClient(**client_kwargs)
     return c.search(**search_kwargs)
-
