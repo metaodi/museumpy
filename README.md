@@ -157,6 +157,6 @@ To create a new release, follow these steps (please respect [Semantic Versioning
 
 1. Adapt the version number in `museumpy/__init__.py`
 1. Update the CHANGELOG with the version
-1. Create a pull request to merge `develop` into `master` (make sure the tests pass!)
-1. Create a [new release/tag on GitHub](https://github.com/metaodi/museumpy/releases) (on the master branch)
+1. Create a [pull request to merge `develop` into `main`](https://github.com/metaodi/museumpy/compare/main...develop?expand=1) (make sure the tests pass!)
+1. Create a [new release/tag on GitHub](https://github.com/metaodi/museumpy/releases) (on the main branch)
 1. The [publication on PyPI](https://pypi.python.org/pypi/museumpy) happens via [GitHub Actions](https://github.com/metaodi/museumpy/actions?query=workflow%3A%22Upload+Python+Package%22) on every tagged commit

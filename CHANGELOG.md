@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+## [0.0.3] - 2021-09-14
+### Added
+- Workflows to lint and publish the code
+
+### Fixed
+- Wrong version number in __init__.py
+- Linting errors in code base
+
 ## [0.0.2] - 2021-09-13
 ### Changed
 - Add possiblity to provide a `map_function` to parse custom fields
@@ -26,6 +34,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/museumpy/compare/v0.0.2...HEAD
+[Unreleased]: https://github.com/metaodi/museumpy/compare/v0.0.3...HEAD
+[0.0.3]: https://github.com/metaodi/museumpy/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/metaodi/museumpy/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/metaodi/museumpy/releases/tag/v0.0.1
