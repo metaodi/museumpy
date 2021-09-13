@@ -6,8 +6,12 @@
 
 * [Installation](#installation)
 * [Usage](#usage)
-    * [`searchretrieve` operation](#searchretrieve-operation)
-    * [`explain` operation](#explain-operation)
+    * [`search`](#search)
+    * [`fulltext_search`](#fulltext_search)
+* [Advanced Usage](#advanced-usage)
+    * [`module_item`](#module_item)
+    * [`download_attachement`](#download_attachement)
+    * [Custom mapping of fields](#custom-mapping-of-fields)
 * [Release](#release)
 
 ## Installation
@@ -53,7 +57,7 @@ for records in records[:5]:
 import museumpy
 
 records = museumpy.search(
-    base_url='https://mpzurichrietberg.zetcom.com/MpWeb-mpZurichRietberg',
+    base_url='https://test.zetcom.com/MpWeb-mpTest',
     query='Patolu',
 )
 
@@ -65,6 +69,16 @@ for record in records:
 ## Advanced usage
 
 For more advanced usage of this library, it is recommened to first create a client instance and then use this to request data:
+
+```python
+import museumpy
+
+client = museumpy.MuseumPlusClient(
+    base_url='https://test.zetcom.com/MpWeb-mpTest',
+    requests_kwargs={'auth': (user, pw)}
+)
+
+```
 
 
 ### `module_item`
@@ -97,7 +111,7 @@ The raw dict is returned on the `raw` key of the result:
 import museumpy
 
 records = museumpy.search(
-    base_url='https://mpzurichrietberg.zetcom.com/MpWeb-mpZurichRietberg',
+    base_url='https://test.zetcom.com/MpWeb-mpTest',
     query='Patolu',
 )
 for record in records:
@@ -132,9 +146,8 @@ def my_custom_map(record, xml_rec):
 
 
 client = museumpy.MuseumPlusClient(
-    base_url='https://mpzurichrietberg.zetcom.com/MpWeb-mpZurichRietberg',
+    base_url='https://test.zetcom.com/MpWeb-mpTest',
     map_function=my_custom_map,
-    requests_kwargs={'auth': (user, pw)}
 )
 ```
 
