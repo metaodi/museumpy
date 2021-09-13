@@ -32,7 +32,7 @@ class MuseumpyTestCase(unittest.TestCase):
             return
 
         with open(path) as file:
-            content=file.read()
+            content = file.read()
             session_mock.return_value.get.return_value = mock.MagicMock(content=content)  # noqa
             session_mock.return_value.post.return_value = mock.MagicMock(content=content)  # noqa
 

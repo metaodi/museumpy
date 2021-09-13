@@ -1,6 +1,6 @@
+# flake8: noqa
 import museumpy
 from dotenv import load_dotenv, find_dotenv
-from pprint import pprint
 import os
 
 load_dotenv(find_dotenv())
@@ -19,5 +19,5 @@ ref = group['moduleIm']['moduleReference']
 for ref_item in ref['moduleReferenceItem']:
     item = client.module_item(ref_item['moduleItemId'], ref['targetModule'])
     if item['hasAttachments'] == 'true':
-        attachment_path = client.download_attachment(ref_item['moduleItemId'], ref['targetModule'], arguments['--attachments'])
+        attachment_path = client.download_attachment(ref_item['moduleItemId'], ref['targetModule'], 'files')
         print(f"Attachment downloaded and saved at {attachment_path}")

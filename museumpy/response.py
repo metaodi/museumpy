@@ -13,7 +13,7 @@ class SearchResponse(object):
 
     def _extract_records(self, xml, map_function):
         new_records = []
-        xml_recs = self.xmlparser.findall(xml, f'.//{{{ZETCOM_NS}}}module/{{{ZETCOM_NS}}}moduleItem')
+        xml_recs = self.xmlparser.findall(xml, f'.//{{{ZETCOM_NS}}}module/{{{ZETCOM_NS}}}moduleItem')  # noqa
         for xml_rec in xml_recs:
             record = self._map_xml(xml_rec)
             record['raw'] = self.xmlparser.todict(xml_rec, xml_attribs=True)
@@ -27,7 +27,7 @@ class SearchResponse(object):
             return self.xmlparser.find(xml_rec, xpath).text
 
         def xml_group(xpath, sep='; '):
-            groups =  self.xmlparser.findall(xml_rec, xpath)
+            groups = self.xmlparser.findall(xml_rec, xpath)
             return sep.join([g.text for g in groups])
 
         record = {

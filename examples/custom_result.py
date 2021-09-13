@@ -1,3 +1,4 @@
+# flake8: noqa
 import museumpy
 from dotenv import load_dotenv, find_dotenv
 from pprint import pprint
@@ -6,6 +7,7 @@ import os
 load_dotenv(find_dotenv())
 user = os.getenv('MP_USER')
 pw = os.getenv('MP_PASS')
+
 
 # you can create your own custom mapping for the fields you need
 # by parsing the given XML (e.g. using XPATH expressions)
@@ -17,7 +19,7 @@ def my_custom_map(record, xml_rec):
     xml_parser = museumpy.xmlparse.XMLParser()
     my_new_record = {
         'my_id': xml_parser.find(xml_rec, ID_XPATH).text,
-        'my_title': xml_parser.find(xml_rec, TITLE_XPATH).text 
+        'my_title': xml_parser.find(xml_rec, TITLE_XPATH).text
     }
     return my_new_record
 
