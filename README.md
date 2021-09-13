@@ -24,7 +24,7 @@ $ pip install museumpy
 
 ## Usage
 
-See the [`examples` directory](https://github.com/metaodi/museumpy/tree/master/examples) for more scripts.
+See the [`examples` directory](/examples) for more scripts.
 
 ### `search`
 
