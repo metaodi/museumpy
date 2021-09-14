@@ -6,10 +6,12 @@ ZETCOM_NS = "http://www.zetcom.com/ria/ws/module"
 
 
 class SearchResponse(object):
-    def __init__(self, xml_response, map_function=None):
+    def __init__(self, data_loader, map_function=None):
+        self.data_loader = data_loader
         self.xmlparser = xmlparse.XMLParser()
         self.records = []
-        self._extract_records(xml_response, map_function)
+        xml = data_loader.load()
+        self._extract_records(xml, map_function)
 
     def _extract_records(self, xml, map_function):
         new_records = []
