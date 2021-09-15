@@ -14,7 +14,8 @@ class TestClient(MuseumpyTestCase):
     def test_simple_search(self):
         client = MuseumPlusClient('http://test.com/MpWeb-test')
         r = client.search(field='TestField', value='TestValue')
-        self.assertEqual(len(r), 1)
+        self.assertEqual(r.__length_hint__(), 1)
+        self.assertEqual(r.count, 1)
 
         self.assertEqual(r[0]['hasAttachments'], 'true')  # noqa
         self.assertEqual(r[0]['ObjCreditlineGrp'], 'Geschenk Gisela Müller und Erich Gross')  # noqa

@@ -24,7 +24,7 @@ $ pip install museumpy
 
 ## Usage
 
-See the [`examples` directory](https://github.com/metaodi/museumpy/tree/master/examples) for more scripts.
+See the [`examples` directory](/examples) for more scripts.
 
 ### `search`
 
@@ -96,7 +96,7 @@ import museumpy
 
 id = '98977'
 module = 'Multimedia'
-# download attachment to a direcory called `files`
+# download attachment to a directory called `files`
 attachment_path = client.download_attachment(id, module, 'files')
 print(attachment_path)
 ```
@@ -124,9 +124,10 @@ For convenience a default mapping is provided to access some fields more easily:
 ```python
 for record in records:
     print(record['hasAttachments'])
+    print(record['ObjObjectNumberTxt'])
 ```
 
-If you want to customize this mapping, you can pass a `map_function` to `search` and `fulltext_search`:
+If you want to customize this mapping, you can pass a `map_function` to the client, which is then used on all subsequent calls to `search` and `fulltext_search`:
 
 
 ```python
@@ -149,6 +150,15 @@ client = museumpy.MuseumPlusClient(
     base_url='https://test.zetcom.com/MpWeb-mpTest',
     map_function=my_custom_map,
 )
+
+records = client.search(
+    base_url='https://test.zetcom.com/MpWeb-mpTest',
+    query='Patolu',
+)
+for record in records:
+    print(record['my_id'])
+    print(record['my_title'])
+
 ```
 
 ## Release
