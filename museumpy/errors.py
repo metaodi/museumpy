@@ -15,6 +15,7 @@ class XMLParsingError(MuseumpyError):
     The error raised when parsing the XML.
     """
 
+
 class NoMoreRecordsError(MuseumpyError):
     """
     This error is raised if all records have been loaded (or no records are
