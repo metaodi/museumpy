@@ -15,5 +15,5 @@ records = museumpy.search(
 )
 
 pprint(records)
-print(len(records))
+print(records.count)
 pprint(records[0], depth=1)

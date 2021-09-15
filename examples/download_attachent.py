@@ -2,6 +2,7 @@
 import museumpy
 from dotenv import load_dotenv, find_dotenv
 import os
+from pprint import pprint
 import tempfile
 
 load_dotenv(find_dotenv())
@@ -24,6 +25,7 @@ ref = group['moduleItem']['moduleReference']
 
 for ref_item in ref['moduleReferenceItem'][:5]:
     item = client.module_item(ref_item['moduleItemId'], ref['targetModule'])
+    pprint(item, depth=1)
     if item['hasAttachments'] == 'true':
         with tempfile.TemporaryDirectory() as tmpdir:
             attachment_path = client.download_attachment(ref_item['moduleItemId'], ref['targetModule'], tmpdir)
