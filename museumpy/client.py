@@ -45,42 +45,85 @@ class MuseumPlusClient(object):
 
     def fulltext_search(self, query, module='Object', limit=100, offset=0):
         url = f"{self.base_url}/ria-ws/application/module/{module}/search"
-        data = FULLTEXT_TEMPLATE.format(
-            module_name=module,
-            limit=limit,
-            offset=offset,
-            query=query,
-        )
-        xml = data.encode("utf-8")
-        xml_response = self._post_xml(url, xml)
-        return response.SearchResponse(xml_response, self.map_function)
+        params = {
+            'module_name': module,
+            'query': query,
+        }
+        data_loader = DataPoster(url, params, FULLTEXT_TEMPLATE, self.requests_kwargs)
+        return response.SearchResponse(data_loader, limit, offset, self.map_function)
 
     def search(self, field, value, module='Object', limit=100, offset=0):
         url = f"{self.base_url}/ria-ws/application/module/{module}/search"
-        data = SEARCH_TEMPLATE.format(
-            module_name=module,
-            limit=limit,
-            offset=offset,
-            field=field,
-            value=value,
-        )
-        xml = data.encode("utf-8")
-        xml_response = self._post_xml(url, xml)
-        return response.SearchResponse(xml_response, self.map_function)
+        params = {
+            'module_name': module,
+            'field': field,
+            'value': value,
+            }
+        data_loader = DataPoster(url, params, SEARCH_TEMPLATE, self.requests_kwargs)
+        return response.SearchResponse(data_loader, limit, offset, self.map_function)
 
     def module_item(self, id, module='Object'):
         url = f"{self.base_url}/ria-ws/application/module/{module}/{id}"
-        xml_response = self._get_xml(url)
-        resp = response.SearchResponse(xml_response)
-        if len(resp) == 1:
+        data_loader = DataLoader(url, self.requests_kwargs)
+        resp = response.SearchResponse(data_loader)
+        if resp.count == 1:
             return resp[0]
         return resp
 
     def download_attachment(self, id, module='Object', dir='.'):
         url = f"{self.base_url}/ria-ws/application/module/{module}/{id}/attachment"
-        return self._download_file(url, dir)
+        data_loader = DataLoader(url, self.requests_kwargs)
+        return data_loader.download_file(url, dir)
 
-    def _download_file(self, url, dir):
+
+class DataPoster(object):
+    def __init__(self, url, params=None, template=None, requests_kwargs=None):
+        self.session = requests.Session()
+        self.url = url
+        self.params = params
+        self.template = template
+        self.xmlparser = xmlparse.XMLParser()
+        self.requests_kwargs = requests_kwargs or {}
+
+    def load(self, **kwargs):
+        self.params.update(kwargs)
+        xml = self.template.format(**self.params).encode('utf-8')
+        return self._post_xml(self.url, xml)
+
+    def _post_xml(self, url, xml):
+        headers = {'Content-Type': 'application/xml'}
+        res = self._post_content(url, xml, headers)
+        return self.xmlparser.parse(res.content)
+
+    def _post_content(self, url, data, headers):
+        try:
+            res = self.session.post(
+                url,
+                data=data,
+                headers=headers,
+                **self.requests_kwargs
+            )
+            res.raise_for_status()
+        except requests.exceptions.HTTPError as e:
+            raise errors.MuseumPlusError("HTTP error: %s" % e)
+        except requests.exceptions.RequestException as e:
+            raise errors.MuseumPlusError("Request error: %s" % e)
+
+        return res
+
+
+class DataLoader(object):
+    def __init__(self, url, requests_kwargs=None):
+        self.session = requests.Session()
+        self.url = url
+        self.xmlparser = xmlparse.XMLParser()
+        self.requests_kwargs = requests_kwargs or {}
+
+    def load(self, **kwargs):
+        xml = self._get_xml(self.url)
+        return xml
+
+    def download_file(self, url, dir):
         headers = {'Accept': 'application/octet-stream'}
         res = self._get_content(url, headers)
         d = res.headers.get('Content-Disposition')
@@ -109,24 +152,4 @@ class MuseumPlusClient(object):
         except requests.exceptions.RequestException as e:
             raise errors.MuseumPlusError("Request error: %s" % e)
 
-        return res
-
-    def _post_xml(self, url, xml):
-        headers = {'Content-Type': 'application/xml'}
-        res = self._post_content(url, xml, headers)
-        return self.xmlparser.parse(res.content)
-
-    def _post_content(self, url, data, headers):
-        try:
-            res = self.session.post(
-                url,
-                data=data,
-                headers=headers,
-                **self.requests_kwargs
-            )
-            res.raise_for_status()
-        except requests.exceptions.HTTPError as e:
-            raise errors.MuseumPlusError("HTTP error: %s" % e)
-        except requests.exceptions.RequestException as e:
-            raise errors.MuseumPlusError("Request error: %s" % e)
         return res

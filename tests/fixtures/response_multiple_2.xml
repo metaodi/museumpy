@@ -1,0 +1,927 @@
+﻿<application
+	xmlns="http://www.zetcom.com/ria/ws/module">
+	<modules>
+		<module name="Object" totalSize="5">
+			<moduleItem hasAttachments="true" id="38595" uuid="71110">
+				<systemField dataType="Long" name="__id">
+					<value>38595</value>
+				</systemField>
+				<systemField dataType="Varchar" name="__lastModifiedUser">
+					<value>mrzhaa</value>
+				</systemField>
+				<systemField dataType="Timestamp" name="__lastModified">
+					<value>2021-09-07 10:56:34.615</value>
+					<formattedValue language="en">07/09/2021 10:56</formattedValue>
+				</systemField>
+				<systemField dataType="Varchar" name="__createdUser">
+					<value>bon</value>
+				</systemField>
+				<systemField dataType="Timestamp" name="__created">
+					<value>2007-08-30 00:00:00.0</value>
+					<formattedValue language="en">30/08/2007 00:00</formattedValue>
+				</systemField>
+				<systemField dataType="Varchar" name="__orgUnit">
+					<value>IndienOrgUnit</value>
+				</systemField>
+				<systemField name="__uuid">
+					<value>71110</value>
+				</systemField>
+				<dataField dataType="Clob" name="ObjAcquisitionNotesClb">
+					<value>Zugang: 2009</value>
+				</dataField>
+				<dataField dataType="Clob" name="ObjScientificNotesClb">
+					<value>Grundstoff&#xd;
+&#xd;
+Material Kette: Seide&#xd;
+Material Eintrag: Seide&#xd;
+Farben Kette: weiss, rot, grün, violett &#xd;
+Farben Eintrag: weiss, rot, grün, violett&#xd;
+&#xd;
+Futter:&#xd;
+Material Kette: Baumwolle&#xd;
+Material Eintrag: Seide&#xd;
+Farben Kette: weiss, rot, grün &#xd;
+Farben Eintrag: rot&#xd;
+&#xd;
+Faden: ungezwirnt&#xd;
+Bindung: Leinwand&#xd;
+Dichte: &#xd;
+&#xd;
+Musterung&#xd;
+Rapporte Kette: &#xd;
+Rapporte Eintrag: &#xd;
+Satzgrösse Kette: &#xd;
+Satzgrösse Eintrag: &#xd;
+&#xd;
+Färbung / Musterungstechniken&#xd;
+Reservemusterung im Garn &#xd;
+Dekoration: gemustertes Goldband mit goldenen Fransen&#xd;
+&#xd;
+&#xd;
+Musterung/Ornamente&#xd;
+Die Vorderseiten dieser Fragmente sind aus dem Hauptfeld eines Patolu-Stoffs der Gruppe 2; Motiv Typ 8g (? es fehlen gewisse Zickzacklinien!); es fehlen die weisse Punkte in der Mitte der Blüten. &#xd;
+Das Hauptfeld zeigt "fulvadi bhat" Design.&#xd;
+Aufgenäht auf gestreifte Längsbordüren mit wenig Doppel-Ikat Musterung eines anderen Patolu.&#xd;
+Ein goldenes Band gemustert mit einer Blumenranke und als Abschluss einen Streifen Zickzacklinie ist an einem Ende aufgenäht. Die Fransen aus feinem Metall sind wie gelockte. &#xd;
+&#xd;
+Dokumentation&#xd;
+Feldnotizen EF:&#xd;
+Feldfotos EF:&#xd;
+Literaturhinweise: Bühler Alfred und Eberhard Fischer, 1979, "The Patola of Gujarat", Vol. 1, S.59, Fig.58; Vol. 2, Abb. 251&#xd;
+Vergleichstextilien: &#xd;
+Publikation</value>
+				</dataField>
+				<dataField dataType="Long" name="ObjDateFromLnu">
+					<value>1890</value>
+					<formattedValue language="en">1,890</formattedValue>
+				</dataField>
+				<dataField dataType="Long" name="ObjDateToLnu">
+					<value>1910</value>
+					<formattedValue language="en">1,910</formattedValue>
+				</dataField>
+				<dataField dataType="Varchar" name="ObjDateTxt">
+					<value>um 1900</value>
+				</dataField>
+				<dataField dataType="Varchar" name="ObjObjectNumberTxt">
+					<value>2009.113</value>
+				</dataField>
+				<vocabularyReference name="ObjAcquisitionMethodVoc" id="30344" instanceName="ObjAcquisitionModeVgr">
+					<vocabularyReferenceItem id="232401" name="Geschenk">
+						<formattedValue language="en">Geschenk</formattedValue>
+					</vocabularyReferenceItem>
+				</vocabularyReference>
+				<vocabularyReference name="ObjAcquisitionStatusVoc" id="30345" instanceName="ObjAcquisitionStatusVgr">
+					<vocabularyReferenceItem id="240334" name="Eigentum">
+						<formattedValue language="en">Eigentum</formattedValue>
+					</vocabularyReferenceItem>
+				</vocabularyReference>
+				<vocabularyReference name="ObjCategoryVoc" id="30349" instanceName="ObjCategoryVgr">
+					<vocabularyReferenceItem id="85713" name="object">
+						<formattedValue language="en">Object</formattedValue>
+					</vocabularyReferenceItem>
+				</vocabularyReference>
+				<vocabularyReference name="ObjClassificationVoc" id="30350" instanceName="ObjClassificationVgr">
+					<vocabularyReferenceItem id="248633" name="Textil">
+						<formattedValue language="en">Textil</formattedValue>
+					</vocabularyReferenceItem>
+				</vocabularyReference>
+				<vocabularyReference name="ObjPublicationStatusVoc" id="30432" instanceName="ObjPublicationStatusVgr">
+					<vocabularyReferenceItem id="232425" name="ja">
+						<formattedValue language="en">ja</formattedValue>
+					</vocabularyReferenceItem>
+				</vocabularyReference>
+				<virtualField name="ObjPerAssociationSurnameVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjObjectNumberSortedVrt">
+					<value>2009.0113</value>
+				</virtualField>
+				<virtualField name="ObjObjectENVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjUuidVrt">
+					<value>71110</value>
+				</virtualField>
+				<virtualField name="ObjCurrentLocationVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjObjectTitleVrt">
+					<value>Patolu, Fragmente eines Doppel-Ikat Tanzkostüms, fulvadi bhat</value>
+				</virtualField>
+				<virtualField name="ObjObjectVrt">
+					<value>2009.113, Standardkünstler, Patolu, Fragmente eines Doppel-Ikat Tanzkostüms, fulvadi bhat, um 1900</value>
+				</virtualField>
+				<virtualField name="ObjPerAssociationVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjAssociatedPlaceVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjNormalLocationVrt">
+					<value>Textillager: B1</value>
+				</virtualField>
+				<virtualField name="ObjCurrentLocationGrpVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjContractsVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjExhibitionsVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjObjectNumberVrt">
+					<value>2009.113</value>
+				</virtualField>
+				<virtualField name="ObjBarcodeVrt">
+					<value>CH-001319-0.Obj.38595</value>
+				</virtualField>
+				<virtualField name="ObjMultimediaRestrictionsVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjPerAssociationGenderVrt">
+					<value></value>
+				</virtualField>
+				<repeatableGroup name="ObjObjectNumberGrp" size="1">
+					<repeatableGroupItem id="576699">
+						<dataField dataType="Varchar" name="Part1Txt">
+							<value>2009</value>
+						</dataField>
+						<dataField dataType="Varchar" name="Part2Txt">
+							<value>.</value>
+						</dataField>
+						<dataField dataType="Varchar" name="Part3Txt">
+							<value>113</value>
+						</dataField>
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<dataField dataType="Boolean" name="InternetBoo">
+							<value>false</value>
+							<formattedValue language="en">no</formattedValue>
+						</dataField>
+						<virtualField name="NumberSortedVrt">
+							<value>2009.0113</value>
+						</virtualField>
+						<virtualField name="NumbersVrt">
+							<value></value>
+						</virtualField>
+						<virtualField name="NumberWithoutSpecialCharactersVrt">
+							<value>2009113</value>
+						</virtualField>
+						<virtualField name="NumberVrt">
+							<value>2009.113</value>
+						</virtualField>
+						<vocabularyReference name="DenominationVoc" id="41617" instanceName="ObjObjectNumberDenominationVgr">
+							<vocabularyReferenceItem id="89719" name="objInvNumber">
+								<formattedValue language="en">Inventarnummer</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+						<moduleReference name="InvNumberSchemeRef" targetModule="InventoryNumber" multiplicity="N:1" size="1">
+							<moduleReferenceItem moduleItemId="10001" uuid="dc660b86-e107-4ac6-a9c0-883fb5c10f56">
+								<formattedValue language="en">__Rietberg neu</formattedValue>
+							</moduleReferenceItem>
+						</moduleReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjObjectTitleGrp" size="1">
+					<repeatableGroupItem id="509731">
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<dataField dataType="Varchar" name="TitleTxt">
+							<value>Patolu, Fragmente eines Doppel-Ikat Tanzkostüms, fulvadi bhat</value>
+						</dataField>
+						<dataField dataType="Boolean" name="InternetBoo">
+							<value>false</value>
+							<formattedValue language="en">no</formattedValue>
+						</dataField>
+						<vocabularyReference name="TypeVoc" id="30450" instanceName="ObjTitleTypeVgr">
+							<vocabularyReferenceItem id="232488" name="__Titel/Untertitel">
+								<formattedValue language="en">Title/subtitle</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjValuationGrp" size="1">
+					<repeatableGroupItem id="1142157">
+						<dataField dataType="Numeric" name="ConversionRateNum">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<dataField dataType="Date" name="DateDat">
+							<value>2012-11-29</value>
+							<formattedValue language="en">29/11/2012</formattedValue>
+						</dataField>
+						<dataField dataType="Numeric" name="ValueNum">
+							<value>200</value>
+							<formattedValue language="en">200</formattedValue>
+						</dataField>
+						<vocabularyReference name="CurrencyVoc" id="30273" instanceName="GenCurrencyVgr">
+							<vocabularyReferenceItem id="30582" name="node_86">
+								<formattedValue language="en">CHF</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+						<vocabularyReference name="TypeVoc" id="30454" instanceName="ObjValueType">
+							<vocabularyReferenceItem id="33158" name="InsuranceVal">
+								<formattedValue language="en">Insurance value</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjMaterialTechniqueGrp" size="1">
+					<repeatableGroupItem id="642821">
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<dataField dataType="Varchar" name="DetailsTxt">
+							<value>Seide, Baumwolle / Doppel-Ikat</value>
+						</dataField>
+						<dataField dataType="Boolean" name="InternetBoo">
+							<value>false</value>
+							<formattedValue language="en">no</formattedValue>
+						</dataField>
+						<virtualField name="TechniqueVrt">
+							<value></value>
+						</virtualField>
+						<virtualField name="MaterialVrt">
+							<value></value>
+						</virtualField>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjGeograficGrp" size="1">
+					<repeatableGroupItem id="1366342">
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<vocabularyReference name="PlaceVoc" id="30288" instanceName="GenPlaceVgr">
+							<vocabularyReferenceItem id="235474" name="de Land / Region##Indien, Gujarat">
+								<formattedValue language="en">Indien, Gujarat</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+						<vocabularyReference name="TypeVoc" id="52617" instanceName="ObjGeographicTypeVgr">
+							<vocabularyReferenceItem id="234005" name="de Land / Region">
+								<formattedValue language="en">de Land / Region</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjNormalLocationGrp" size="1">
+					<repeatableGroupItem id="1498963">
+						<dataField dataType="Varchar" name="DetailsTxt">
+							<value>Textillager: B1</value>
+						</dataField>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjCreditlineGrp" size="1">
+					<repeatableGroupItem id="706621">
+						<dataField dataType="Varchar" name="CreditlineTxt">
+							<value>Geschenk Eberhard und Barbara Fischer</value>
+						</dataField>
+						<vocabularyReference name="LanguageVoc" id="66626" instanceName="ObjCreditlineLanguageVgr">
+							<vocabularyReferenceItem id="232489" name="de">
+								<formattedValue language="en">de</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+						<vocabularyReference name="CreditlineVoc" id="70618" instanceName="ObjCreditlineVgr">
+							<vocabularyReferenceItem id="248899" name="Geschenk Eberhard und Barbara Fischer">
+								<formattedValue language="en">Geschenk Eberhard und Barbara Fischer</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjCurrentLocationGrp" size="1">
+					<repeatableGroupItem id="1171040">
+						<dataField dataType="Varchar" name="DetailTxt">
+							<value>Textillager: B1</value>
+						</dataField>
+						<vocabularyReference name="StatusVoc" id="30286" instanceName="GenMoveStatusVgr">
+							<vocabularyReferenceItem id="30843" name="current">
+								<formattedValue language="en">aktuell</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjDateGrp" size="1">
+					<repeatableGroupItem id="1014945">
+						<dataField dataType="Varchar" name="DateTxt">
+							<value>um 1900</value>
+						</dataField>
+						<dataField dataType="Boolean" name="InternetBoo">
+							<value>false</value>
+							<formattedValue language="en">no</formattedValue>
+						</dataField>
+						<dataField dataType="Varchar" name="DateFromTxt">
+							<value>1890</value>
+						</dataField>
+						<dataField dataType="Varchar" name="DateToTxt">
+							<value>1910</value>
+						</dataField>
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<dataField dataType="Long" name="DatestampToFuzzySearchLnu">
+							<value>783100</value>
+							<formattedValue language="en">783,100</formattedValue>
+						</dataField>
+						<dataField dataType="Long" name="DatestampFromFuzzySearchLnu">
+							<value>774900</value>
+							<formattedValue language="en">774,900</formattedValue>
+						</dataField>
+						<virtualField name="PreviewVrt">
+							<value>um 1900</value>
+						</virtualField>
+						<virtualField name="PreviewENVrt">
+							<value>um 1900</value>
+						</virtualField>
+						<vocabularyReference name="TypeVoc" id="30361" instanceName="ObjDateTypeVgr">
+							<vocabularyReferenceItem id="31226" name="node_5422">
+								<formattedValue language="en">Production</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjConditionGrp" size="1">
+					<repeatableGroupItem id="773639">
+						<dataField dataType="Clob" name="NotesClb">
+							<value>in gutem Zustand;</value>
+						</dataField>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<moduleReference name="ObjLiteratureRef" targetModule="Literature" multiplicity="M:N" size="1">
+					<moduleReferenceItem moduleItemId="191" uuid="5615" seqNo="0">
+						<formattedValue language="en">Kontext: Textilien: Die Sammlung Eberhard Fischer: Geschenk (Teil 1: 2009) an das Museum Rietberg Zürich, hrsg./übers.: Museum Rietberg Zürich; Autor/in: Fischer, Eberhard; Zürich, 2009</formattedValue>
+						<vocabularyReference name="TypeVoc" id="30317" instanceName="LitObjectTypeVgr">
+							<vocabularyReferenceItem id="258426" name="Kontext">
+								<formattedValue language="en">Kontext</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjMultimediaRef" targetModule="Multimedia" multiplicity="M:N" size="1">
+					<moduleReferenceItem moduleItemId="94631" uuid="c6f02b6b-54df-448c-aa4f-ea7a778d1d0a" seqNo="0">
+						<formattedValue language="en">Bild, 2009.113.JPG</formattedValue>
+						<dataField dataType="Boolean" name="ThumbnailBoo">
+							<value>true</value>
+							<formattedValue language="en">yes</formattedValue>
+						</dataField>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjObjectGroupsRef" targetModule="ObjectGroup" multiplicity="M:N" size="1">
+					<moduleReferenceItem moduleItemId="6054" uuid="aeb3d431-0520-42d1-ac38-61f804b57612" seqNo="0">
+						<formattedValue language="en">Patolu, MAP</formattedValue>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjPerAssociationRef" targetModule="Person" multiplicity="M:N" size="1">
+					<moduleReferenceItem moduleItemId="3820" uuid="1" seqNo="0">
+						<formattedValue language="en">Standardkünstler</formattedValue>
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjOwnershipRef" targetModule="Ownership" multiplicity="M:N" size="2">
+					<moduleReferenceItem moduleItemId="27787" uuid="10378" seqNo="0">
+						<formattedValue language="en">Eberhard Fischer</formattedValue>
+						<dataField dataType="Long" name="SortLnu">
+							<value>5</value>
+							<formattedValue language="en">5</formattedValue>
+						</dataField>
+						<vocabularyReference name="CurrencyVoc" id="30273" instanceName="GenCurrencyVgr">
+							<vocabularyReferenceItem id="30582" name="node_86">
+								<formattedValue language="en">CHF</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</moduleReferenceItem>
+					<moduleReferenceItem moduleItemId="29446" uuid="10379" seqNo="1">
+						<formattedValue language="en">Kunsthandel, Ahmedabad, Indien</formattedValue>
+						<dataField dataType="Long" name="SortLnu">
+							<value>10</value>
+							<formattedValue language="en">10</formattedValue>
+						</dataField>
+						<vocabularyReference name="CurrencyVoc" id="30273" instanceName="GenCurrencyVgr">
+							<vocabularyReferenceItem id="30582" name="node_86">
+								<formattedValue language="en">CHF</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjPerOwnerRef" targetModule="Person" multiplicity="N:1" size="1">
+					<moduleReferenceItem moduleItemId="26" uuid="1015400">
+						<formattedValue language="en">Museum Rietberg Zürich</formattedValue>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjAdministrationRef" targetModule="Person" multiplicity="N:1" size="1">
+					<moduleReferenceItem moduleItemId="26" uuid="1015400">
+						<formattedValue language="en">Museum Rietberg Zürich</formattedValue>
+					</moduleReferenceItem>
+				</moduleReference>
+			</moduleItem>
+			<moduleItem hasAttachments="true" id="35963" uuid="71044">
+				<systemField dataType="Long" name="__id">
+					<value>35963</value>
+				</systemField>
+				<systemField dataType="Varchar" name="__lastModifiedUser">
+					<value>mrzhaa</value>
+				</systemField>
+				<systemField dataType="Timestamp" name="__lastModified">
+					<value>2021-09-07 10:56:23.524</value>
+					<formattedValue language="en">07/09/2021 10:56</formattedValue>
+				</systemField>
+				<systemField dataType="Varchar" name="__createdUser">
+					<value>bon</value>
+				</systemField>
+				<systemField dataType="Timestamp" name="__created">
+					<value>2007-08-03 00:00:00.0</value>
+					<formattedValue language="en">03/08/2007 00:00</formattedValue>
+				</systemField>
+				<systemField dataType="Varchar" name="__orgUnit">
+					<value>IndienOrgUnit</value>
+				</systemField>
+				<systemField name="__uuid">
+					<value>71044</value>
+				</systemField>
+				<dataField dataType="Clob" name="ObjAcquisitionNotesClb">
+					<value>Zugang: 2009</value>
+				</dataField>
+				<dataField dataType="Clob" name="ObjScientificNotesClb">
+					<value>EF: 12&#xd;
+&#xd;
+Grundstoff&#xd;
+Material Kette: Seide&#xd;
+Material Eintrag: Seide&#xd;
+Farben Kette: &#xd;
+Farben Eintrag: &#xd;
+&#xd;
+Faden: ungezwirnt&#xd;
+Bindung: Leinwand&#xd;
+Dichte:&#xd;
+&#xd;
+Musterung&#xd;
+Rapporte Kette: &#xd;
+Rapporte Eintrag:&#xd;
+Satzgrösse Kette:&#xd;
+Satzgrösse Eintrag:&#xd;
+&#xd;
+Färbung / Musterungtechniken&#xd;
+Reservemusterung im Garn &#xd;
+&#xd;
+Eintrag-Abschluss: Fransen; die andere Endbordüre fehlt &#xd;
+&#xd;
+Musterung/Ornamente&#xd;
+&#xd;
+Ursprünglicher Stoff:&#xd;
+Gruppe 1; Motiv Typ 1 &#xd;
+Das Hauptfeld zeigt "pan bhat" Design.&#xd;
+&#xd;
+Das stark beschädigte Hauptfeld wurde unterlegt mit einem doppelten Patolu-Stoffstück im Muster Motif type 4; an den Längsbordüren unterlegt von einem seidenen zartgrünen Stoffstück.&#xd;
+&#xd;
+Dokumentationen:&#xd;
+Feldnotizen EF:&#xd;
+Feldfotos EF:&#xd;
+Literaturhinweise: &#xd;
+Vergleichstextilien: &#xd;
+Publikation</value>
+				</dataField>
+				<dataField dataType="Long" name="ObjDateFromLnu">
+					<value>1890</value>
+					<formattedValue language="en">1,890</formattedValue>
+				</dataField>
+				<dataField dataType="Long" name="ObjDateToLnu">
+					<value>1910</value>
+					<formattedValue language="en">1,910</formattedValue>
+				</dataField>
+				<dataField dataType="Varchar" name="ObjDateTxt">
+					<value>um 1900</value>
+				</dataField>
+				<dataField dataType="Varchar" name="ObjObjectNumberTxt">
+					<value>2009.63</value>
+				</dataField>
+				<vocabularyReference name="ObjAcquisitionMethodVoc" id="30344" instanceName="ObjAcquisitionModeVgr">
+					<vocabularyReferenceItem id="232401" name="Geschenk">
+						<formattedValue language="en">Geschenk</formattedValue>
+					</vocabularyReferenceItem>
+				</vocabularyReference>
+				<vocabularyReference name="ObjAcquisitionStatusVoc" id="30345" instanceName="ObjAcquisitionStatusVgr">
+					<vocabularyReferenceItem id="240334" name="Eigentum">
+						<formattedValue language="en">Eigentum</formattedValue>
+					</vocabularyReferenceItem>
+				</vocabularyReference>
+				<vocabularyReference name="ObjCategoryVoc" id="30349" instanceName="ObjCategoryVgr">
+					<vocabularyReferenceItem id="85713" name="object">
+						<formattedValue language="en">Object</formattedValue>
+					</vocabularyReferenceItem>
+				</vocabularyReference>
+				<vocabularyReference name="ObjClassificationVoc" id="30350" instanceName="ObjClassificationVgr">
+					<vocabularyReferenceItem id="248633" name="Textil">
+						<formattedValue language="en">Textil</formattedValue>
+					</vocabularyReferenceItem>
+				</vocabularyReference>
+				<vocabularyReference name="ObjPublicationStatusVoc" id="30432" instanceName="ObjPublicationStatusVgr">
+					<vocabularyReferenceItem id="232425" name="ja">
+						<formattedValue language="en">ja</formattedValue>
+					</vocabularyReferenceItem>
+				</vocabularyReference>
+				<virtualField name="ObjPerAssociationSurnameVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjObjectNumberSortedVrt">
+					<value>2009.0063</value>
+				</virtualField>
+				<virtualField name="ObjObjectENVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjUuidVrt">
+					<value>71044</value>
+				</virtualField>
+				<virtualField name="ObjCurrentLocationVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjObjectTitleVrt">
+					<value>Patolu, Fragment eines Doppel-Ikat Seidensaris, pan bhat</value>
+				</virtualField>
+				<virtualField name="ObjObjectVrt">
+					<value>2009.63, Standardkünstler, Patolu, Fragment eines Doppel-Ikat Seidensaris, pan bhat, um 1900</value>
+				</virtualField>
+				<virtualField name="ObjPerAssociationVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjAssociatedPlaceVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjNormalLocationVrt">
+					<value>Textillager: 2.2.</value>
+				</virtualField>
+				<virtualField name="ObjCurrentLocationGrpVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjContractsVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjExhibitionsVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjObjectNumberVrt">
+					<value>2009.63</value>
+				</virtualField>
+				<virtualField name="ObjBarcodeVrt">
+					<value>CH-001319-0.Obj.35963</value>
+				</virtualField>
+				<virtualField name="ObjMultimediaRestrictionsVrt">
+					<value></value>
+				</virtualField>
+				<virtualField name="ObjPerAssociationGenderVrt">
+					<value></value>
+				</virtualField>
+				<repeatableGroup name="ObjObjectNumberGrp" size="1">
+					<repeatableGroupItem id="575652">
+						<dataField dataType="Varchar" name="Part1Txt">
+							<value>2009</value>
+						</dataField>
+						<dataField dataType="Varchar" name="Part2Txt">
+							<value>.</value>
+						</dataField>
+						<dataField dataType="Varchar" name="Part3Txt">
+							<value>63</value>
+						</dataField>
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<dataField dataType="Boolean" name="InternetBoo">
+							<value>false</value>
+							<formattedValue language="en">no</formattedValue>
+						</dataField>
+						<virtualField name="NumberSortedVrt">
+							<value>2009.0063</value>
+						</virtualField>
+						<virtualField name="NumbersVrt">
+							<value></value>
+						</virtualField>
+						<virtualField name="NumberWithoutSpecialCharactersVrt">
+							<value>200963</value>
+						</virtualField>
+						<virtualField name="NumberVrt">
+							<value>2009.63</value>
+						</virtualField>
+						<vocabularyReference name="DenominationVoc" id="41617" instanceName="ObjObjectNumberDenominationVgr">
+							<vocabularyReferenceItem id="89719" name="objInvNumber">
+								<formattedValue language="en">Inventarnummer</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+						<moduleReference name="InvNumberSchemeRef" targetModule="InventoryNumber" multiplicity="N:1" size="1">
+							<moduleReferenceItem moduleItemId="10001" uuid="dc660b86-e107-4ac6-a9c0-883fb5c10f56">
+								<formattedValue language="en">__Rietberg neu</formattedValue>
+							</moduleReferenceItem>
+						</moduleReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjObjectTitleGrp" size="1">
+					<repeatableGroupItem id="508669">
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<dataField dataType="Varchar" name="TitleTxt">
+							<value>Patolu, Fragment eines Doppel-Ikat Seidensaris, pan bhat</value>
+						</dataField>
+						<dataField dataType="Boolean" name="InternetBoo">
+							<value>false</value>
+							<formattedValue language="en">no</formattedValue>
+						</dataField>
+						<vocabularyReference name="TypeVoc" id="30450" instanceName="ObjTitleTypeVgr">
+							<vocabularyReferenceItem id="232488" name="__Titel/Untertitel">
+								<formattedValue language="en">Title/subtitle</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjValuationGrp" size="1">
+					<repeatableGroupItem id="1121779">
+						<dataField dataType="Numeric" name="ConversionRateNum">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<dataField dataType="Date" name="DateDat">
+							<value>2012-11-23</value>
+							<formattedValue language="en">23/11/2012</formattedValue>
+						</dataField>
+						<dataField dataType="Numeric" name="ValueNum">
+							<value>500</value>
+							<formattedValue language="en">500</formattedValue>
+						</dataField>
+						<vocabularyReference name="CurrencyVoc" id="30273" instanceName="GenCurrencyVgr">
+							<vocabularyReferenceItem id="30582" name="node_86">
+								<formattedValue language="en">CHF</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+						<vocabularyReference name="TypeVoc" id="30454" instanceName="ObjValueType">
+							<vocabularyReferenceItem id="33158" name="InsuranceVal">
+								<formattedValue language="en">Insurance value</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjMaterialTechniqueGrp" size="1">
+					<repeatableGroupItem id="641858">
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<dataField dataType="Varchar" name="DetailsTxt">
+							<value>Seide / Doppel-Ikat</value>
+						</dataField>
+						<dataField dataType="Boolean" name="InternetBoo">
+							<value>false</value>
+							<formattedValue language="en">no</formattedValue>
+						</dataField>
+						<virtualField name="TechniqueVrt">
+							<value></value>
+						</virtualField>
+						<virtualField name="MaterialVrt">
+							<value></value>
+						</virtualField>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjGeograficGrp" size="1">
+					<repeatableGroupItem id="1362190">
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<vocabularyReference name="PlaceVoc" id="30288" instanceName="GenPlaceVgr">
+							<vocabularyReferenceItem id="235474" name="de Land / Region##Indien, Gujarat">
+								<formattedValue language="en">Indien, Gujarat</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+						<vocabularyReference name="TypeVoc" id="52617" instanceName="ObjGeographicTypeVgr">
+							<vocabularyReferenceItem id="234005" name="de Land / Region">
+								<formattedValue language="en">de Land / Region</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjDimAllGrp" size="1">
+					<repeatableGroupItem id="1222837">
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<dataField dataType="Numeric" name="SecondNum">
+							<value>128</value>
+							<formattedValue language="en">128</formattedValue>
+						</dataField>
+						<dataField dataType="Numeric" name="FirstNum">
+							<value>180</value>
+							<formattedValue language="en">180</formattedValue>
+						</dataField>
+						<dataField dataType="Boolean" name="InternetBoo">
+							<value>false</value>
+							<formattedValue language="en">no</formattedValue>
+						</dataField>
+						<virtualField name="PreviewVrt">
+							<value>Textilfläche: 180 x 128 cm</value>
+						</virtualField>
+						<virtualField name="PreviewENVrt">
+							<value>Textilfläche 180.00 x 128.00 cm</value>
+						</virtualField>
+						<vocabularyReference name="MeasureType2DimVoc" id="44619" instanceName="ObjDimAllMeasureType2DimVgr">
+							<vocabularyReferenceItem id="233988" name="Textilfläche">
+								<formattedValue language="en">Textilfläche</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+						<vocabularyReference name="UnitVoc" id="44622" instanceName="ObjDimAllUnitVgr">
+							<vocabularyReferenceItem id="77705" name="cm">
+								<formattedValue language="en">cm</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+						<vocabularyReference name="TypeVoc" id="44617" instanceName="ObjDimAllTypeVgr">
+							<vocabularyReferenceItem id="77701" name="2_D">
+								<formattedValue language="en">2 D</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjNormalLocationGrp" size="1">
+					<repeatableGroupItem id="1498395">
+						<dataField dataType="Varchar" name="DetailsTxt">
+							<value>Textillager: 2.2.</value>
+						</dataField>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjCreditlineGrp" size="1">
+					<repeatableGroupItem id="705486">
+						<dataField dataType="Varchar" name="CreditlineTxt">
+							<value>Geschenk Eberhard und Barbara Fischer</value>
+						</dataField>
+						<vocabularyReference name="LanguageVoc" id="66626" instanceName="ObjCreditlineLanguageVgr">
+							<vocabularyReferenceItem id="232489" name="de">
+								<formattedValue language="en">de</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+						<vocabularyReference name="CreditlineVoc" id="70618" instanceName="ObjCreditlineVgr">
+							<vocabularyReferenceItem id="248899" name="Geschenk Eberhard und Barbara Fischer">
+								<formattedValue language="en">Geschenk Eberhard und Barbara Fischer</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjCurrentLocationGrp" size="1">
+					<repeatableGroupItem id="1169872">
+						<dataField dataType="Varchar" name="DetailTxt">
+							<value>Textillager: 2.2.</value>
+						</dataField>
+						<vocabularyReference name="StatusVoc" id="30286" instanceName="GenMoveStatusVgr">
+							<vocabularyReferenceItem id="30843" name="current">
+								<formattedValue language="en">aktuell</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjDateGrp" size="1">
+					<repeatableGroupItem id="1014067">
+						<dataField dataType="Varchar" name="DateTxt">
+							<value>um 1900</value>
+						</dataField>
+						<dataField dataType="Boolean" name="InternetBoo">
+							<value>false</value>
+							<formattedValue language="en">no</formattedValue>
+						</dataField>
+						<dataField dataType="Varchar" name="DateFromTxt">
+							<value>1890</value>
+						</dataField>
+						<dataField dataType="Varchar" name="DateToTxt">
+							<value>1910</value>
+						</dataField>
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+						<dataField dataType="Long" name="DatestampToFuzzySearchLnu">
+							<value>783100</value>
+							<formattedValue language="en">783,100</formattedValue>
+						</dataField>
+						<dataField dataType="Long" name="DatestampFromFuzzySearchLnu">
+							<value>774900</value>
+							<formattedValue language="en">774,900</formattedValue>
+						</dataField>
+						<virtualField name="PreviewVrt">
+							<value>um 1900</value>
+						</virtualField>
+						<virtualField name="PreviewENVrt">
+							<value>um 1900</value>
+						</virtualField>
+						<vocabularyReference name="TypeVoc" id="30361" instanceName="ObjDateTypeVgr">
+							<vocabularyReferenceItem id="31226" name="node_5422">
+								<formattedValue language="en">Production</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<repeatableGroup name="ObjConditionGrp" size="1">
+					<repeatableGroupItem id="773047">
+						<dataField dataType="Clob" name="NotesClb">
+							<value>Die grob "gewifelten" Stellen sind mit violettem Oberfaden und rotem Unterfaden maschinell zusammen genäht worden. Zwei Stoffstücke mit Motiv Typ 4c oder d wurden eingesetzt.&#xd;
+&#xd;
+weisses Etikett: EF 12</value>
+						</dataField>
+					</repeatableGroupItem>
+				</repeatableGroup>
+				<moduleReference name="ObjLiteratureRef" targetModule="Literature" multiplicity="M:N" size="1">
+					<moduleReferenceItem moduleItemId="191" uuid="5615" seqNo="0">
+						<formattedValue language="en">Kontext: Textilien: Die Sammlung Eberhard Fischer: Geschenk (Teil 1: 2009) an das Museum Rietberg Zürich, hrsg./übers.: Museum Rietberg Zürich; Autor/in: Fischer, Eberhard; Zürich, 2009</formattedValue>
+						<vocabularyReference name="TypeVoc" id="30317" instanceName="LitObjectTypeVgr">
+							<vocabularyReferenceItem id="258426" name="Kontext">
+								<formattedValue language="en">Kontext</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjMultimediaRef" targetModule="Multimedia" multiplicity="M:N" size="1">
+					<moduleReferenceItem moduleItemId="94578" uuid="4c4cab30-3c5c-4c5e-93a2-69813faa739e" seqNo="0">
+						<formattedValue language="en">Bild, 2009.63.JPG</formattedValue>
+						<dataField dataType="Boolean" name="ThumbnailBoo">
+							<value>true</value>
+							<formattedValue language="en">yes</formattedValue>
+						</dataField>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjObjectGroupsRef" targetModule="ObjectGroup" multiplicity="M:N" size="1">
+					<moduleReferenceItem moduleItemId="6054" uuid="aeb3d431-0520-42d1-ac38-61f804b57612" seqNo="0">
+						<formattedValue language="en">Patolu, MAP</formattedValue>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjPerAssociationRef" targetModule="Person" multiplicity="M:N" size="1">
+					<moduleReferenceItem moduleItemId="3820" uuid="1" seqNo="0">
+						<formattedValue language="en">Standardkünstler</formattedValue>
+						<dataField dataType="Long" name="SortLnu">
+							<value>1</value>
+							<formattedValue language="en">1</formattedValue>
+						</dataField>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjOwnershipRef" targetModule="Ownership" multiplicity="M:N" size="2">
+					<moduleReferenceItem moduleItemId="25389" uuid="10482" seqNo="0">
+						<formattedValue language="en">Kunsthandel, Ahmedabad, Indien</formattedValue>
+						<dataField dataType="Long" name="SortLnu">
+							<value>10</value>
+							<formattedValue language="en">10</formattedValue>
+						</dataField>
+						<vocabularyReference name="CurrencyVoc" id="30273" instanceName="GenCurrencyVgr">
+							<vocabularyReferenceItem id="30582" name="node_86">
+								<formattedValue language="en">CHF</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</moduleReferenceItem>
+					<moduleReferenceItem moduleItemId="28167" uuid="10481" seqNo="1">
+						<formattedValue language="en">Eberhard Fischer</formattedValue>
+						<dataField dataType="Long" name="SortLnu">
+							<value>5</value>
+							<formattedValue language="en">5</formattedValue>
+						</dataField>
+						<vocabularyReference name="CurrencyVoc" id="30273" instanceName="GenCurrencyVgr">
+							<vocabularyReferenceItem id="30582" name="node_86">
+								<formattedValue language="en">CHF</formattedValue>
+							</vocabularyReferenceItem>
+						</vocabularyReference>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjPerOwnerRef" targetModule="Person" multiplicity="N:1" size="1">
+					<moduleReferenceItem moduleItemId="26" uuid="1015400">
+						<formattedValue language="en">Museum Rietberg Zürich</formattedValue>
+					</moduleReferenceItem>
+				</moduleReference>
+				<moduleReference name="ObjAdministrationRef" targetModule="Person" multiplicity="N:1" size="1">
+					<moduleReferenceItem moduleItemId="26" uuid="1015400">
+						<formattedValue language="en">Museum Rietberg Zürich</formattedValue>
+					</moduleReferenceItem>
+				</moduleReference>
+			</moduleItem>
+		</module>
+	</modules>
+</application>
