@@ -47,30 +47,26 @@ class MuseumPlusClient(object):
         url = f"{self.base_url}/ria-ws/application/module/{module}/search"
         params = {
             'module_name': module,
-            'limit': limit,
-            'offset': offset,
             'query': query,
         }
         data_loader = DataPoster(url, params, FULLTEXT_TEMPLATE, self.requests_kwargs)
-        return response.SearchResponse(data_loader, self.map_function)
+        return response.SearchResponse(data_loader, limit, offset, self.map_function)
 
     def search(self, field, value, module='Object', limit=100, offset=0):
         url = f"{self.base_url}/ria-ws/application/module/{module}/search"
         params = {
             'module_name': module,
-            'limit': limit,
-            'offset': offset,
             'field': field,
             'value': value,
             }
         data_loader = DataPoster(url, params, SEARCH_TEMPLATE, self.requests_kwargs)
-        return response.SearchResponse(data_loader, self.map_function)
+        return response.SearchResponse(data_loader, limit, offset, self.map_function)
 
     def module_item(self, id, module='Object'):
         url = f"{self.base_url}/ria-ws/application/module/{module}/{id}"
         data_loader = DataLoader(url, self.requests_kwargs)
         resp = response.SearchResponse(data_loader)
-        if len(resp) == 1:
+        if resp.count == 1:
             return resp[0]
         return resp
 
@@ -86,14 +82,12 @@ class DataPoster(object):
         self.url = url
         self.params = params
         self.template = template
-        self.response = None
         self.xmlparser = xmlparse.XMLParser()
         self.requests_kwargs = requests_kwargs or {}
 
     def load(self, **kwargs):
         self.params.update(kwargs)
         xml = self.template.format(**self.params).encode('utf-8')
-        print(xml)
         return self._post_xml(self.url, xml)
 
     def _post_xml(self, url, xml):
@@ -122,7 +116,6 @@ class DataLoader(object):
     def __init__(self, url, requests_kwargs=None):
         self.session = requests.Session()
         self.url = url
-        self.response = None
         self.xmlparser = xmlparse.XMLParser()
         self.requests_kwargs = requests_kwargs or {}
 
