@@ -65,7 +65,7 @@ class MuseumPlusClient(object):
     def module_item(self, id, module='Object'):
         url = f"{self.base_url}/ria-ws/application/module/{module}/{id}"
         data_loader = DataLoader(url, self.requests_kwargs)
-        resp = response.SearchResponse(data_loader)
+        resp = response.SearchResponse(data_loader, map_function=self.map_function)
         if resp.count == 1:
             return resp[0]
         return resp
