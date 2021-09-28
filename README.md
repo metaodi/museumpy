@@ -56,7 +56,7 @@ for records in records[:5]:
 ```python
 import museumpy
 
-records = museumpy.search(
+records = museumpy.fulltext_search(
     base_url='https://test.zetcom.com/MpWeb-mpTest',
     query='Patolu',
 )
