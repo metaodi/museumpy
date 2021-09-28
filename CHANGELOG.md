@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- The response schema changed
+- Pass `map_function` to response in `module_item()` call
 
 ## [0.1.0] - 2021-09-16
 ### Added
