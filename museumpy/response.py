@@ -48,8 +48,29 @@ class SearchResponse(object):
             groups = self.xmlparser.findall(xml_rec, xpath)
             return sep.join([g.text for g in groups])
 
+        refs = {}
+        xml_refs = self.xmlparser.findall(xml_rec, f".//{{{ZETCOM_NS}}}moduleReference")
+        for xml_ref in xml_refs:
+            items = []
+            ref_items = self.xmlparser.findall(xml_ref, f"./{{{ZETCOM_NS}}}moduleReferenceItem")
+            for ref_item in ref_items:
+                value = self.xmlparser.find(ref_item, f"./{{{ZETCOM_NS}}}formattedValue").text
+                item = {
+                    'moduleItemId': ref_item.attrib['moduleItemId'],
+                    'seqNo': int(ref_item.attrib.get('seqNo', 0)),
+                    'value': value
+                }
+                items.append(item)
+            sorted_items = sorted(items, key=lambda k: k['seqNo'])
+            for s in sorted_items:
+                del s['seqNo']
+            ref = {
+                'name': xml_ref.attrib['name'],
+                'items': sorted_items
+            }
+            refs[xml_ref.attrib['targetModule']] = ref
+
         record = {
-            'hasAttachments': xml_rec.attrib['hasAttachments'],
             'ObjObjectNumberTxt': xml_text(
                 f".//{{{ZETCOM_NS}}}dataField[@name='ObjObjectNumberTxt']/{{{ZETCOM_NS}}}value"
             ),
@@ -58,52 +79,14 @@ class SearchResponse(object):
                 f"//{{{ZETCOM_NS}}}dataField[@name='TitleTxt']"
                 f"//{{{ZETCOM_NS}}}value"
             ),
-            'ObjPerAssociationRef': xml_text(
-                f".//{{{ZETCOM_NS}}}moduleReference[@name='ObjPerAssociationRef']"
-                f"/{{{ZETCOM_NS}}}moduleReferenceItem"
-                f"/{{{ZETCOM_NS}}}formattedValue"
-            ),
-            'ObjGeograficGrp': xml_text(
-                f".//{{{ZETCOM_NS}}}repeatableGroup[@name='ObjGeograficGrp']"
-                f"//{{{ZETCOM_NS}}}vocabularyReference[@name='PlaceVoc']"
-                f"//{{{ZETCOM_NS}}}formattedValue"
-            ),
             'ObjDateTxt': xml_text(
                 f".//{{{ZETCOM_NS}}}dataField[@name='ObjDateTxt']/{{{ZETCOM_NS}}}value"
             ),
-            'ObjDimAllGrp': xml_text(
-                f".//{{{ZETCOM_NS}}}repeatableGroup[@name='ObjDimAllGrp']"
-                f"//{{{ZETCOM_NS}}}virtualField[@name='PreviewVrt']"
-                f"//{{{ZETCOM_NS}}}value"
+            'ObjBriefDescriptionClb': xml_text(
+                f".//{{{ZETCOM_NS}}}dataField[@name='ObjBriefDescriptionClb']/{{{ZETCOM_NS}}}value"
             ),
-            'ObjMaterialTechniqueGrp': xml_text(
-                f".//{{{ZETCOM_NS}}}repeatableGroup[@name='ObjMaterialTechniqueGrp']"
-                f"//{{{ZETCOM_NS}}}dataField[@name='DetailsTxt']"
-                f"//{{{ZETCOM_NS}}}value"
-            ),
-            'ObjCreditlineGrp': xml_text(
-                f".//{{{ZETCOM_NS}}}repeatableGroup[@name='ObjCreditlineGrp']"
-                f"//{{{ZETCOM_NS}}}dataField[@name='CreditlineTxt']"
-                f"//{{{ZETCOM_NS}}}value"
-            ),
-            'ObjOwnershipRef': xml_group(
-                f".//{{{ZETCOM_NS}}}moduleReference[@name='ObjOwnershipRef']"
-                f"/{{{ZETCOM_NS}}}moduleReferenceItem"
-                f"/{{{ZETCOM_NS}}}formattedValue"
-            ),
-            'ObjScientificNotesClb': xml_text(
-                f".//{{{ZETCOM_NS}}}dataField[@name='ObjScientificNotesClb']/{{{ZETCOM_NS}}}value"
-            ),
-            'ObjLiteratureRef': xml_text(
-                f".//{{{ZETCOM_NS}}}moduleReference[@name='ObjLiteratureRef']"
-                f"/{{{ZETCOM_NS}}}moduleReferenceItem"
-                f"/{{{ZETCOM_NS}}}formattedValue"
-            ),
-            'ObjMultimediaRef': xml_text(
-                f".//{{{ZETCOM_NS}}}moduleReference[@name='ObjMultimediaRef']"
-                f"/{{{ZETCOM_NS}}}moduleReferenceItem"
-                f"/{{{ZETCOM_NS}}}formattedValue"
-            ),
+            'refs': refs,
+            'hasAttachments': xml_rec.attrib['hasAttachments'],
         }
         return record
 
