@@ -72,10 +72,15 @@ For more advanced usage of this library, it is recommened to first create a clie
 
 ```python
 import museumpy
+import requests
+
+s = requests.Session()
+s.auth = ('user', 'pass')
+s.headers.update({'Accept-Language': 'de'})
 
 client = museumpy.MuseumPlusClient(
     base_url='https://test.zetcom.com/MpWeb-mpTest',
-    requests_kwargs={'auth': (user, pw)}
+    session=s
 )
 
 ```
