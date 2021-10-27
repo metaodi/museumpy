@@ -1,5 +1,6 @@
 # flake8: noqa
 import museumpy
+import requests
 from dotenv import load_dotenv, find_dotenv
 import os
 from pprint import pprint
@@ -8,10 +9,12 @@ import tempfile
 load_dotenv(find_dotenv())
 user = os.getenv('MP_USER')
 pw = os.getenv('MP_PASS')
+s = requests.Session()
+s.auth = (user, pw)
 
 client = museumpy.MuseumPlusClient(
     base_url='https://mpzurichrietberg.zetcom.com/MpWeb-mpZurichRietberg',
-    requests_kwargs={'auth': (user, pw)},
+    session=s
 )
 
 group_result = client.search(

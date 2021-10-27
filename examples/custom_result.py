@@ -1,5 +1,6 @@
 # flake8: noqa
 import museumpy
+import requests
 from dotenv import load_dotenv, find_dotenv
 from pprint import pprint
 import os
@@ -7,6 +8,8 @@ import os
 load_dotenv(find_dotenv())
 user = os.getenv('MP_USER')
 pw = os.getenv('MP_PASS')
+s = requests.Session()
+s.auth = (user, pw)
 
 
 # you can create your own custom mapping for the fields you need
@@ -27,7 +30,7 @@ def my_custom_map(record, xml_rec):
 client = museumpy.MuseumPlusClient(
     base_url='https://mpzurichrietberg.zetcom.com/MpWeb-mpZurichRietberg',
     map_function=my_custom_map,
-    requests_kwargs={'auth': (user, pw)}
+    session=s
 )
 
 records = client.search(field='ObjObjectNumberTxt', value='2019.184')
