@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Allow to pass a custom `requests.Session()`-compatible session object. This allows to set custom params like authentication or request headers.
+
+### Removed
+- Since it's now possible to pass a custom session object, the parameter `requests_kwargs` has been removed
 
 ## [0.2.0] - 2021-09-28
 ### Changed
