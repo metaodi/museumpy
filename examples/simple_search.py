@@ -1,4 +1,5 @@
 import museumpy
+import requests
 from dotenv import load_dotenv, find_dotenv
 from pprint import pprint
 import os
@@ -6,10 +7,12 @@ import os
 load_dotenv(find_dotenv())
 user = os.getenv('MP_USER')
 pw = os.getenv('MP_PASS')
+s = requests.Session()
+s.auth = (user, pw)
 
 records = museumpy.search(
     base_url='https://mpzurichrietberg.zetcom.com/MpWeb-mpZurichRietberg',
-    requests_kwargs={'auth': (user, pw)},
+    session=s,
     field='ObjObjectNumberTxt',
     value='2019.184',
 )
