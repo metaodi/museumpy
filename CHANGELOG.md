@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Add export methods to library: `exports` to list all exports and `module_export`/`module_item_export` to export multiple or a single item
 
 ## [0.3.0] - 2021-10-27
 ### Changed
