@@ -16,6 +16,7 @@ def fulltext_search(base_url, query, **kwargs):  # noqa
     c = MuseumPlusClient(**client_kwargs)
     return c.search(**search_kwargs)
 
+
 def search(base_url, field, value, **kwargs):  # noqa
     search_params = ['field', 'value', 'module', 'limit', 'offset']
     search_kwargs = {k: v for k, v in kwargs.items() if k in search_params}
@@ -28,6 +29,7 @@ def search(base_url, field, value, **kwargs):  # noqa
 
     c = MuseumPlusClient(**client_kwargs)
     return c.search(**search_kwargs)
+
 
 def exports(base_url, **kwargs):
     exports_params = ['module']

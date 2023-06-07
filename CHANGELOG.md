@@ -4,7 +4,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 ### Added
-- Add export methods to library: `exports` to list all exports and `module_export`/`module_item_export` to export multiple or a single item
+- Export methods to library: `exports` to list all exports and `module_export`/`module_item_export` to export multiple or a single item
+- New example with a flattend result dict
 
 ## [0.3.0] - 2021-10-27
 ### Changed

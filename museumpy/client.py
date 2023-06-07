@@ -88,13 +88,13 @@ class MuseumPlusClient(object):
         if resp.count == 1:
             return resp[0]
         return resp
-    
+
     def module_item_export(self, id, export_id, module='Object', dir='.'):
         url = f"{self.base_url}/ria-ws/application/module/{module}/{id}/export/{export_id}"
         data_loader = DataLoader(url, self.session)
         return data_loader.download_file(url, dir)
-    
-    def module_export(self, export_id, field=None, value=None, module='Object', limit=100, offset=0, dir='.'):
+
+    def module_export(self, export_id, field=None, value=None, module='Object', limit=100, offset=0, dir='.'):  # noqa
         url = f"{self.base_url}/ria-ws/application/module/{module}/export/{export_id}"
         params = {
             'module_name': module,
@@ -130,7 +130,7 @@ class DataPoster(object):
         xml = self.template.format(**self.params).encode('utf-8')
         res = self._post_xml(self.url, xml)
         return self.xmlparser.parse(res.content)
-    
+
     def download_file(self, dir='.'):
         xml = self.template.format(**self.params).encode('utf-8')
         res = self._post_xml(self.url, xml)

@@ -6,6 +6,7 @@ from . import errors
 ZETCOM_NS = "http://www.zetcom.com/ria/ws/module"
 EXPORT_NS = "http://www.zetcom.com/ria/ws/module/export"
 
+
 class SearchResponse(object):
     def __init__(self, data_loader, limit=100, offset=0, map_function=None):
         self.data_loader = data_loader

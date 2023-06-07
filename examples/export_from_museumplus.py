@@ -1,7 +1,6 @@
 import museumpy
 import requests
 from dotenv import load_dotenv, find_dotenv
-from pprint import pprint
 import os
 
 load_dotenv(find_dotenv())
