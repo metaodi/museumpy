@@ -4,6 +4,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+## [0.4.1] - 2023-06-07
+### Fixed
+- Hotfix release because version number was not updated.
+
 ## [0.4.0] - 2023-06-07
 ### Added
 - Export methods to library: `exports` to list all exports and `module_export`/`module_item_export` to export multiple or a single item
@@ -57,7 +61,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/museumpy/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/metaodi/museumpy/compare/v0.4.1...HEAD
+[0.4.1]: https://github.com/metaodi/museumpy/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/metaodi/museumpy/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/metaodi/museumpy/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/metaodi/museumpy/compare/v0.1.0...v0.2.0
