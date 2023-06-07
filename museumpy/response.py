@@ -4,7 +4,7 @@ from . import xmlparse
 from . import errors
 
 ZETCOM_NS = "http://www.zetcom.com/ria/ws/module"
-
+EXPORT_NS = "http://www.zetcom.com/ria/ws/module/export"
 
 class SearchResponse(object):
     def __init__(self, data_loader, limit=100, offset=0, map_function=None):
@@ -151,3 +151,54 @@ class SearchResponse(object):
             raise errors.NoMoreRecordsError("There are no more records")
         xml = self.data_loader.load(limit=self.limit, offset=self.offset)
         self._parse_content(xml)
+
+
+class ExportResponse(object):
+    def __init__(self, data_loader):
+        self.data_loader = data_loader
+        self.xmlparser = xmlparse.XMLParser()
+        self.exports = []
+        xml = data_loader.load()
+        self._parse_content(xml)
+
+    def _parse_content(self, xml):
+        self._extract_exports(xml)
+
+    def _extract_exports(self, xml):
+        xml_recs = self.xmlparser.findall(xml, f'.//{{{EXPORT_NS}}}export')  # noqa
+        for xml_rec in xml_recs:
+            export = self._map_xml(xml_rec)
+            export['raw'] = self.xmlparser.todict(xml_rec, xml_attribs=True)
+            self.exports.append(export)
+
+    def _map_xml(self, xml_rec):
+        def xml_text(xpath):
+            return self.xmlparser.find(xml_rec, xpath).text
+
+        export = {
+            'id': xml_rec.attrib['id'],
+            'extension': xml_text(f".//{{{EXPORT_NS}}}extension"),
+            'label': xml_text(f".//{{{EXPORT_NS}}}label"),
+        }
+        return export
+
+    def __repr__(self):
+        try:
+            return (
+                'ExportResponse('
+                'count=%r)'
+                ) % (
+                   len(self.exports)
+                )
+        except AttributeError:
+            return 'ExportResponse(empty)'
+
+    def __len__(self):
+        return len(self.exports)
+
+    def __iter__(self):
+        for export in self.exports:
+            yield export
+
+    def __getitem__(self, key):
+        return self.exports[key]
