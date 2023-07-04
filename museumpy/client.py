@@ -47,7 +47,6 @@ SEARCH_TEMPLATE_NO_FIELD = """<?xml version="1.0" encoding="UTF-8"?>
 
 class MuseumPlusClient(object):
     def __init__(self, base_url=None, map_function=None, session=None):
-        self.session = requests.Session()
         self.base_url = base_url
         self.xmlparser = xmlparse.XMLParser()
         self.map_function = map_function
