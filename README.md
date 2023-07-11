@@ -1,6 +1,6 @@
 # museumpy
 
-**museum**py is a client for python to get data from [Zetcom MuseumPlus](https://www.zetcom.com/en/museumplus-en/) instances.
+**museum**py is a client for python to get data from [Zetcom MuseumPlus](https://www.zetcom.com/en/museumplus-en/) instances using its [API](http://docs.zetcom.com/framework-public/ws/ws-api-module.html).
 
 ## Table of Contents
 
